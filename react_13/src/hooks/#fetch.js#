@@ -1,0 +1,26 @@
+const useFetch = dataProps => {
+
+
+
+  if(dataProps === 'get') {
+    return async () => {
+      const responce = await fetch('https://dummyjson.com/products?limit=5&select=title,description,price')
+      const data = await responce.json()
+      return data.products 
+    }
+  }
+  return async order => {
+    const responce = await fetch('https://dummyjson.com/products/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ order })
+    })
+  }
+  
+  
+  
+}
+
+
+
+export default useFetch

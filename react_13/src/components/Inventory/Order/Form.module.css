@@ -1,0 +1,207 @@
+.form {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 0 8rem 8rem rgba(0, 0, 0, 0.8), 0 0 4rem 4rem rgba(255, 255, 255, 0.8);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width: 720px) {
+  .input-group {
+    flex-direction: column;
+  }
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.actions .button-alt {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.actions .button-alt:hover,
+.actions .button-alt:active {
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.8);
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+  width: 8rem;
+  margin-left: calc(50% - 4rem);
+  margin-top: 2rem;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+}
+
+.button:hover,
+.button:active {
+  box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.fetching {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  border: 16px solid rgba(0, 0, 0, 0.1);
+  border-top: 16px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  animation: fetching 2s linear infinite;
+}
+
+.fetching span {
+  display: block;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.error {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  border: 16px solid rgba(0, 0, 0, 0.8);
+  border-left: 16px solid rgba(255, 0, 0, 0.8);
+  border-top: 16px solid rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+
+.error span {
+  display: block;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.8);
+}
+
+@keyframes fetching {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .actions {
+  margin: 2rem;
+  text-align: right;
+}
+
+.actions button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.actions button:hover,
+.actions button:active {
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+} */
+
+/* .form {
+  margin: 1rem 0;
+  height: 17rem;
+  overflow: auto;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.actions button {
+  font: inherit;
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.actions .submit {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.invalid label {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.invalid input {
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+} */

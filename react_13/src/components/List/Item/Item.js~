@@ -1,0 +1,63 @@
+import classes from './Item.module.css'
+
+import { useContext } from 'react'
+import InventoryContext from './../../../context/inventory'
+import Add from 'Add'
+
+
+
+const Item = dataProps => {
+
+
+
+  const inventoryContext = useContext(InventoryContext)
+  
+  const price = `$${ dataProps.item.price.toFixed(2) }`
+
+
+
+  const addHandler = count => {
+
+    inventoryContext.addHandler({
+      item: dataProps.item,
+      count
+    })
+    
+  }
+
+
+  return (
+
+    <li className={ classes.item }>
+
+
+
+      <div>
+	<h3>{ dataProps.item.title }</h3>
+
+	<p className={ classes.description }>
+	  { dataProps.item.description }
+	</p>
+
+	<p className={ classes.price }>
+	  { price }
+	</p>
+      </div>
+
+      <div>
+	<Add id={ dataProps.item.id } onAdd={ addHandler } />
+      </div>
+
+
+
+    </li>
+    
+  )
+  
+
+  
+}
+
+
+
+export default Item

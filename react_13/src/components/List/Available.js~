@@ -1,0 +1,48 @@
+import classes from './Available.module.css'
+
+import Card from './../UI/Card'
+import Item from './Item/Item'
+
+
+
+const initialList = [
+  {
+    id: 1,
+    title: 'title',
+    description: 'description',
+    price: 1
+  }
+]
+
+const Available = () => {
+
+
+
+  const list_ = initialList.map(item => (
+    <Item key={ `item_${ item.id }` } item={ item } />
+  ))
+
+
+  return (
+
+    <section className={ classes.list }>
+
+
+
+    <Card>
+      <ul>{ list_ }</ul>
+    </Card>
+
+
+
+    </section>
+
+  )
+
+
+  
+}
+
+
+
+export default Available

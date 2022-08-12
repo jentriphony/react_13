@@ -1,0 +1,65 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+.item h2 {
+  margin: 0 0 0.5rem 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.summary {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: rgba(64, 128, 64, 1.0);
+}
+
+.count {
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: 720px) {
+  .actions {
+    flex-direction: row;
+  }
+}
+
+.item button {
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 3rem;
+  text-align: center;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin: 0.25rem;
+}
+
+.item button:hover,
+.item button:active {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}

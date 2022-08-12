@@ -1,0 +1,70 @@
+.list {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: list-appear 1s ease-out forwards;
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fetching {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  border: 16px solid rgba(0, 0, 0, 0.1);
+  border-top: 16px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  animation: fetching 2s linear infinite;
+}
+
+.fetching span {
+  display: block;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.error {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  border: 16px solid rgba(0, 0, 0, 0.8);
+  border-left: 16px solid rgba(255, 0, 0, 0.8);
+  border-top: 16px solid rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+
+.error span {
+  display: block;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.8);
+}
+
+@keyframes list-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fetching {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

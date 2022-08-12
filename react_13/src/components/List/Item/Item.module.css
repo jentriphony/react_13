@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.description {
+  width: 80%;
+  font-style: italic;
+}
+
+.price {
+  margin-top: 0.25;
+  font-weight: bold;
+  color: rgba(64, 128, 64, 1.0);
+  font-size: 1.25rem;
+}

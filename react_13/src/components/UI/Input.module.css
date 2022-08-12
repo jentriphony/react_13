@@ -1,0 +1,52 @@
+.input {
+  padding-left: 1rem;
+  width: 120%;
+  margin: 1rem 0;
+  text-align: left;
+  overflow: auto;
+}
+
+.label {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.group {
+  margin-bottom: 3rem;
+}
+
+.input input {
+  outline: none;
+  padding: 0.75rem 0.5rem;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05);
+  border: 1.25px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.input input:focus {
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+@media(max-width: 720px) {
+  .input input {
+    width: 80%;
+  }
+}
+
+.input p {
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255, 32, 0, 0.8);
+  overflow: auto;
+}
+
+.error {
+  color: rgba(255, 32, 0, 0.8);
+}
